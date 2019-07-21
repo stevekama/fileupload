@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/css/materialize.min.css">
+    <!-- load main scripts -->
+    <script type="text/javascript" src="/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="/js/materialize.min.js"></script>
+    <title>File Uploads</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>File Uploads</h1>
+      <%= typeof msg != 'undefined' ? msg : '' %>
+      <form class="" action="/upload" method="post" enctype="multipart/form-data">
+        <div class="file-field input-field">
+          <div class="btn grey">
+            <span>File</span>
+            <input type="file" name="myImage">
+          </div>
+          <div class="file-path-wrapper">
+            <input class="file-path validate" type="text">
+          </div>
+        </div>
+
+        <button type="submit" class="btn">submit</button>
+      </form>
+    </div>
+  </body>
+</html>
